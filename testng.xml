@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Adactin Hotel Booking Suite">
+ <listeners>
+		<listener class-name="utils.ListenerClass"></listener>
+	</listeners>
+	<parameter name="url"
+		value="https://adactinhotelapp.com/index.php"></parameter>
+
+	<test thread-count="5" name="ChromeTest">
+		<parameter name="browser" value="Chrome"></parameter>
+		<classes>
+	 		<class name="test.SignUpTest" />
+			<class name="test.LoginTest" /> 
+			<class name="test.SearchHotelTest" />
+			<class name="test.SelectHotelTest" />
+			 <class name="test.BookHotelTest" />
+			<class name="test.MyItineraryTest" />
+			<class name="test.LogoutTest" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> 
